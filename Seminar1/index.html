@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <h1>Задание 1</h1>
+  <!-- Добавляем кнопки "Назад" и "Вперед" -->
+  <button id="back">Назад</button>
+  <button id="forward">Вперед</button>
+  <br>
+
+  <h2>Задание 2</h2>
+  <div class="container">
+    <button id="add-btn">Добавить элемент</button>
+    <button id="remove-btn">Удалить элемент</button>
+    <button id="clone-btn">Клонировать элемент</button>
+    <div id="elements-container"></div>
+  </div>
+
+  <h3>Задание 3</h3>
+  <div class="container my-5">
+    <button class="btn btn-primary mb-3" id="add-article-btn">Добавить статью</button>
+    <div id="articles-container"></div>
+  </div>
+
+  <!-- Модальное окно для редактирования статьи -->
+  <div class="modal fade" id="editArticleModal" tabindex="-1" role="dialog" aria-labelledby="editArticleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editArticleModalLabel">Редактировать статью</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control mb-3" id="edit-article-title" placeholder="Заголовок">
+          <textarea class="form-control" id="edit-article-content" rows="3" placeholder="Содержание статьи"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary" id="save-changes-btn">Сохранить изменения</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
