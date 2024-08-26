@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Задание 1</h1>
+  <nav>
+    <a href="#" class="active">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <h1> Задание 2</h1>
+
+  <button id="openModal">Открыть модальное окно</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Модальное окно</h2>
+      <p>Это содержимое модального окна.</p>
+    </div>
+  </div>
+
+  <h1>Задание 3</h1>
+
+  <button id="buyButton">Купить</button>
+
+  <h1>Задание 4</h1>
+
+  <div class="container">
+    <form id="questionnaire">
+      <!-- Вопрос 1 -->
+      <div class="question">
+        <h3>Какое ваше любимое время года?</h3>
+        <div class="answer">
+          <label><input type="radio" name="question1" value="spring"> Весна</label>
+        </div>
+        <div class="answer">
+          <label><input type="radio" name="question1" value="summer"> Лето</label>
+        </div>
+        <div class="answer">
+          <label><input type="radio" name="question1" value="autumn"> Осень</label>
+        </div>
+        <div class="answer">
+          <label><input type="radio" name="question1" value="winter"> Зима</label>
+        </div>
+      </div>
+
+      <!-- Вопрос 2 -->
+      <div class="question">
+        <h3>Какой ваш любимый цвет?</h3>
+        <div class="answer">
+          <label><input type="radio" name="question2" value="red"> Красный</label>
+        </div>
+        <div class="answer">
+          <label><input type="radio" name="question2" value="blue"> Синий</label>
+        </div>
+        <div class="answer">
+          <label><input type="radio" name="question2" value="green"> Зеленый</label>
+        </div>
+        <div class="answer">
+          <label><input type="radio" name="question2" value="yellow"> Желтый</label>
+        </div>
+      </div>
+
+      <button type="button" class="submit-button">Завершить опрос</button>
+    </form>
+
+    <div id="result" style="display: none;">
+      <h2>Результаты опроса:</h2>
+      <div id="answers"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
