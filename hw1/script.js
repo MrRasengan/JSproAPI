@@ -75,11 +75,13 @@ function createClassCard(classData) {
 	unregisterBtn.disabled = classData.currentParticipants <= 0;
 	unregisterBtn.addEventListener("click", () => unregisterFromClass(classData));
 
-	cardBody.appendChild(classTitle);
-	cardBody.appendChild(classTime);
-	cardBody.appendChild(classParticipants);
-	cardBody.appendChild(registerBtn);
-	cardBody.appendChild(unregisterBtn);
+	cardBody.append(
+		classTitle,
+		classTime,
+		classParticipants,
+		registerBtn,
+		unregisterBtn,
+		);
 
 	card.appendChild(cardBody);
 	classCard.appendChild(card);
