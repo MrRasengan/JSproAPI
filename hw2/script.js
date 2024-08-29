@@ -32,34 +32,40 @@ const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
 const sliderNav = document.querySelector(".slider-nav");
 
+
+
 let currentIndex = 0; // Индекс текущего изображения
 
 // Функция для отображения текущего изображения
 function displayCurrentImage() {
+	sliderImage.classList.add("fade-out");
+	setTimeout(() => {
 	sliderImage.src = images[currentIndex];
+	sliderImage.classList.remove("fade-out");
 	updateNavigation();
-}
-
-// Функция для обновления навигационных точек
-function updateNavigation() {
-	// Очищаем навигационные точки
-	sliderNav.innerHTML = "";
-
-	// Создаём новые навигационные точки
-	for (let i = 0; i < images.length; i++) {
-		const dot = document.createElement("span");
-		dot.classList.add("dot");
-		dot.addEventListener("click", () => {
-			currentIndex = i;
-			displayCurrentImage();
-		});
-		sliderNav.appendChild(dot);
+	}, 500);
 	}
 
-	// Отмечаем текущую точку как активную
+// Функция для обновления навигационных точек
+function createNavigationDots() {
+	for (let i = 0; i < images.length; i++) {
+	const dot = document.createElement("span");
+	dot.classList.add("dot");
+	dot.addEventListener("click", () => {
+	currentIndex = i;
+	displayCurrentImage();
+	});
+	sliderNav.appendChild(dot);
+	}
+	}
+
+	function updateNavigation() {
 	const dots = sliderNav.querySelectorAll(".dot");
+	dots.forEach(dot => dot.classList.remove("active"));
 	dots[currentIndex].classList.add("active");
-}
+	}
+
+	createNavigationDots();
 
 // Обработчик события клика на кнопку "Предыдущее изображение"
 prevBtn.addEventListener("click", () => {
